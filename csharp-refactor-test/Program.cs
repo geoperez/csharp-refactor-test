@@ -16,7 +16,7 @@ namespace csharp_refactor_test
             Console.Clear();
             Console.WriteLine("Guess the magic word");
 
-            var data = GetData().GetAwaiter().GetResult();
+            var data = getData().GetAwaiter().GetResult();
             var output = ProcessData(data);
             var results = new List<bool>();
 
@@ -56,12 +56,12 @@ namespace csharp_refactor_test
                 StartGame();
         }
 
-        private static async Task<string> GetData()
+        private static async Task<string> getData()
         {
             return "HOLA";
         }
 
-        private static char[] ProcessData(string data) => data.ToCharArray();
+        private static char[] ProcessData(string Data) => Data.ToCharArray();
 
         private static void PrintResult(bool isValid)
         {
