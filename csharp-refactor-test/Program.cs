@@ -18,7 +18,7 @@ namespace csharp_refactor_test
 
             var data = getData().GetAwaiter().GetResult();
             var output = ProcessData(data);
-            var results = new List<bool>();
+            var Results = new List<bool>();
 
             foreach (var n in output)
             {
@@ -27,16 +27,16 @@ namespace csharp_refactor_test
                 var letter = Console.ReadKey().Key;
 
                 if (letter.ToString()[0] == n)
-                    results.Add(true);
+                    Results.Add(true);
                 else
-                    results.Add(false);
+                    Results.Add(false);
 
                 Console.WriteLine();
             }
 
             var isValid = true;
 
-            foreach (var r in results)
+            foreach (var r in Results)
             {
                 if (r == true && isValid == true)
                     isValid = true;
